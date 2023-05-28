@@ -128,5 +128,56 @@
             document.getElementById("morseResult").textContent = morseOutput;
         }
     </script>
+    
+<head>
+  <title>Morse Code Converter</title>
+  <script>
+    function convertToEnglish() {
+      var morseCode = document.getElementById("morseCode").value.trim();
+      var morseToEnglish = {
+        ".-": "A", "-...": "B", "-.-.": "C", "-..": "D", ".": "E",
+        "..-.": "F", "--.": "G", "....": "H", "..": "I", ".---": "J",
+        "-.-": "K", ".-..": "L", "--": "M", "-.": "N", "---": "O",
+        ".--.": "P", "--.-": "Q", ".-.": "R", "...": "S", "-": "T",
+        "..-": "U", "...-": "V", ".--": "W", "-..-": "X", "-.--": "Y",
+        "--..": "Z", ".----": "1", "..---": "2", "...--": "3", "....-": "4",
+        ".....": "5", "-....": "6", "--...": "7", "---..": "8", "----.": "9",
+        "-----": "0", "--..--": ",", ".-.-.-": ".", "..--..": "?",
+        "-....-": "-", "-..-.": "/", "-.--.": "(", "-.--.-": ")", ".-...": "&",
+        "---...": ":", "-.-.-.": ";", "-...-": "=", ".-.-.": "+", "-....-": "-",
+        "..--.-": "_", ".-..-.": "\"", "...-..-": "$", ".--.-.": "@", "...---...": "SOS"
+      };
+      
+      var words = morseCode.split(" / ");
+      var englishText = "";
+      
+      for (var i = 0; i < words.length; i++) {
+        var letters = words[i].split(" ");
+        for (var j = 0; j < letters.length; j++) {
+          if (morseToEnglish.hasOwnProperty(letters[j])) {
+            englishText += morseToEnglish[letters[j]];
+          } else {
+            englishText += "?";
+          }
+        }
+        englishText += " ";
+      }
+      
+      document.getElementById("englishText").textContent = englishText;
+    }
+  </script>
+</head>
+<body>
+  <h1>Morse Code Converter</h1>
+  
+  <label for="morseCode">Enter Morse Code:</label>
+  <input type="text" id="morseCode" />
+  <button onclick="convertToEnglish()">Convert</button>
+  
+  <h2>English Text:</h2>
+  <p id="englishText"></p>
+</body>
+</html>
+
 </body>
 </html>
