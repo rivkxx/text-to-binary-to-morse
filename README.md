@@ -1,12 +1,14 @@
 # Text to Binary & Morse Code Converter
 
-This is a simple web application that converts text into binary numbers and Morse code. It allows you to enter text in a textarea, and with a click of a button, it converts the text into binary numbers and Morse code. Additionally, it provides the ability to translate Morse code back to English.
+This is a simple web application that converts text into binary numbers and Morse code. It allows you to enter text in a textarea, and with a click of a button, it converts the text into binary numbers and Morse code. 
+
+![image](https://github.com/rivkxx/text-to-binary-to-morse/assets/81345344/d768c151-7f93-4326-baa4-33f07a72aed8)
+
 
 ## Features
 
 - Text to Binary Conversion: Converts the entered text into binary numbers.
 - Text to Morse Code Conversion: Converts the entered text into Morse code.
-- Morse Code to English Translation: Translates Morse code back to English.
 - User-friendly Interface: The application provides a clean and intuitive user interface for easy interaction.
 
 ## Technologies Used
